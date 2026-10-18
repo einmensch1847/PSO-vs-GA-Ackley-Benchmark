@@ -352,6 +352,3 @@ Dim    Success         RMSE            Time
 100    Tie             PSO             GA             
 
 Total experiment time: 60.25 seconds
-
-Process finished with exit code 0
-
