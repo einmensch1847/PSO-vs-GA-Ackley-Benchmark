@@ -23,6 +23,22 @@ The goal of this experiment is to evaluate and compare the performance of PSO an
 - PSO leverages collective memory (`gBest`) to remain highly accurate up to 40 dimensions.
 - Both algorithms hit the **Curse of Dimensionality** at 100D, but PSO yields a significantly lower error (RMSE ~2.47 vs GA's ~16.97).
 
+## 📈 Visualizations
+### 1. Success Rate vs Dimension
+<p align="center">
+  <img src="SUCCESS RATE.png" alt="Success Rate Chart" width="700">
+</p>
+
+### 2. RMSE vs Dimension (Log Scale)
+<p align="center">
+  <img src="RMSE.png" alt="RMSE Chart" width="700">
+</p>
+
+### 3. Execution Time vs Dimension
+<p align="center">
+  <img src="AVG TIME.png" alt="Time Chart" width="700">
+</p>
+
 ## 📊 Sample Output (D=100)
 ```text
 ==============================================
