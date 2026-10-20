@@ -2,9 +2,6 @@ package experiment;
 
 import java.util.List;
 
-/**
- * برنامه‌ی اصلی — اجرای آزمایش و چاپ جدول‌ها
- */
 public class Main {
 
     public static void main(String[] args) {
@@ -22,10 +19,15 @@ public class Main {
         printTables(results);
 
         System.out.printf("%n Total experiment time: %.2f seconds%n", totalSeconds);
+
+        printTables(results);
+
+        ChartGenerator.showCharts(results);
+
+        System.out.printf("%n Total experiment time: %.2f seconds%n", totalSeconds);
     }
 
     private static void printTables(List<DimensionResult> results) {
-        // جدول ۱: Success Rate
         System.out.println("\n\n========== TABLE 1: SUCCESS RATE (%) ==========");
         System.out.printf("%-6s %-10s %-12s %-12s%n", "Dim", "Threshold", "PSO (%)", "GA (%)");
         System.out.println("--------------------------------------------------");
@@ -36,7 +38,6 @@ public class Main {
                     dim, pso.threshold, pso.successRate, ga.successRate);
         }
 
-        // جدول ۲: RMSE
         System.out.println("\n\n========== TABLE 2: RMSE ==========");
         System.out.printf("%-6s %-12s %-15s %-15s%n", "Dim", "Threshold", "PSO RMSE", "GA RMSE");
         System.out.println("------------------------------------------------------");
@@ -47,7 +48,6 @@ public class Main {
                     dim, pso.threshold, pso.rmse, ga.rmse);
         }
 
-        // جدول ۳: زمان
         System.out.println("\n\n========== TABLE 3: AVG TIME (ms) ==========");
         System.out.printf("%-6s %-15s %-15s%n", "Dim", "PSO Time (ms)", "GA Time (ms)");
         System.out.println("--------------------------------------");
@@ -58,7 +58,6 @@ public class Main {
                     dim, pso.avgTimeMillis, ga.avgTimeMillis);
         }
 
-        // جدول ۴: برنده در هر بعد
         System.out.println("\n\n========== TABLE 4: WINNER PER DIMENSION ==========");
         System.out.printf("%-6s %-15s %-15s %-15s%n",
                 "Dim", "Success", "RMSE", "Time");
